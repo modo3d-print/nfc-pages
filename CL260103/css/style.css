@@ -1,1 +1,69 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4eee9;
+  text-align: center;
+}
 
+.topo {
+  background-color: #8B4513;
+  height: 120px;
+}
+
+.perfil {
+  margin-top: -60px;
+}
+
+.perfil img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: white;
+  padding: 5px;
+  object-fit: cover;
+}
+
+h1 {
+  margin: 10px 0 5px;
+  font-family: cursive;
+}
+
+.subtitulo {
+  color: #555;
+  font-size: 14px;
+}
+
+.descricao {
+  margin: 20px;
+  font-weight: bold;
+}
+
+.botao {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 12px auto;
+  width: 80%;
+  padding: 15px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #444;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.insta { background: #e8cbd0; }
+.whats { background: #cde5d6; }
+.pix { background: #cfe3df; }
+.wifi { background: #cde1ef; }
+.endereco { background: #ddd0e6; }
+
+.botao:hover {
+  opacity: 0.9;
+}
+
+#msg {
+  margin-top: 10px;
+  color: green;
+  font-size: 14px;
+}
