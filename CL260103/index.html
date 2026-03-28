@@ -46,20 +46,25 @@
     Meu Endereço
   </a>
 -->
-  <div id="toast"></div>
+  <div id="toast">
+    <div class="toast-title">✅ Pix copiado!</div>
+    <div class="toast-text">
+      Abra o app do seu banco e cole o código para finalizar o pagamento.
+    </div>
+  </div>
 
   <script>
-      function copiarPix() {
+    function copiarPix() {
       const pix = "SEU_CODIGO_PIX";
-      navigator.clipboard.writeText(pix);
     
-      const toast = document.getElementById("toast");
-      toast.innerText = "✅ Pix copiado! Abra seu banco e cole para pagar.";
-      toast.classList.add("show");
+      navigator.clipboard.writeText(pix).then(() => {
+        const toast = document.getElementById("toast");
+        toast.classList.add("show");
     
-      setTimeout(() => {
-        toast.classList.remove("show");
-      }, 4000);
+        setTimeout(() => {
+          toast.classList.remove("show");
+        }, 4000);
+      });
     }
   </script>
 
