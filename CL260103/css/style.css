@@ -39,9 +39,10 @@ h1 {
 }
 
 .botao {
+  position: relative;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center; /* mantém o texto central */
   margin: 12px auto;
   width: 80%;
   padding: 15px;
@@ -50,7 +51,6 @@ h1 {
   color: #444;
   font-weight: bold;
   font-size: 16px;
-  justify-content: center; /* mantém texto central */
 }
 
 .icone {
