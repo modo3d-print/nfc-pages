@@ -1,1 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <title>Contatos - Ótica Chambella</title>
 
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <div class="topo"></div>
+
+  <div class="perfil">
+    <img src="victoriaGasoni.png" alt="logo">
+  </div>
+
+  <h1>Ótica Chambella</h1>
+  <div class="subtitulo">Clareza que você confia, qualidade que você merece.</div>
+
+  <div class="descricao">
+    Aqui estão meus principais links e formas de contato
+  </div>
+
+  <a class="botao insta" href="https://www.instagram.com/atelie_victoriagasoni?igsh=MXh3Z2dzeW93eDNkMw%3D%3D" target="_blank">
+    <img src="../img/icone-instagram.png" class="icone">
+    Conheça meu Instagram
+  </a>
+
+  <a class="botao whats" href="https://wa.me/qr/C2I7RIZPH57IA1" target="_blank">
+    <img src="../img/icone-whatsapp.png" class="icone">
+    Fale comigo no WhatsApp
+  </a>
+
+  <div class="botao pix" onclick="copiarPix()">
+    <img src="../img/icone-pix.png" class="icone">
+    Pagar com Pix (copiar código)
+  </div>
+  
+  <a class="botao wifi" href="#">
+    <img src="../img/icone-wifi.png" class="icone">
+    Meu Wi-Fi
+  </a>
+
+  <a class="botao endereco" href="https://maps.google.com" target="_blank">
+    <img src="../img/icone-localizacao.png" class="icone">
+    Meu Endereço
+  </a>
+
+  <div id="toast">
+    <div class="toast-title">✅ Pix copiado!</div>
+    <div class="toast-text">
+      Abra o app do seu banco e cole o código para finalizar o pagamento.
+    </div>
+  </div>
+
+  <script>
+    function copiarPix() {
+      const pix = "00020126330014br.gov.bcb.pix0111159741777705204000053039865802BR5925VICTORIA LORENA GASONI DE6008ARARUAMA62070503***63049F8E";
+    
+      navigator.clipboard.writeText(pix).then(() => {
+        const toast = document.getElementById("toast");
+        toast.classList.add("show");
+    
+        setTimeout(() => {
+          toast.classList.remove("show");
+        }, 4000);
+      });
+    }
+  </script>
+
+</body>
+</html>
