@@ -1,1 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Links</title>
 
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4eee9;
+      text-align: center;
+    }
+
+    .topo {
+      background-color: #8B4513;
+      height: 120px;
+    }
+
+    .perfil {
+      margin-top: -60px;
+    }
+
+    .perfil img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background: white;
+      padding: 5px;
+    }
+
+    h1 {
+      margin: 10px 0 5px;
+      font-family: cursive;
+    }
+
+    .subtitulo {
+      color: #555;
+      font-size: 14px;
+    }
+
+    .descricao {
+      margin: 20px;
+      font-weight: bold;
+    }
+
+    .botao {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 12px auto;
+      width: 80%;
+      padding: 15px;
+      border-radius: 12px;
+      text-decoration: none;
+      color: #444;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    .insta { background: #e8cbd0; }
+    .whats { background: #cde5d6; }
+    .pix { background: #cfe3df; }
+    .wifi { background: #cde1ef; }
+    .endereco { background: #ddd0e6; }
+
+    .botao:hover {
+      opacity: 0.9;
+    }
+
+    #msg {
+      margin-top: 10px;
+      color: green;
+      font-size: 14px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="topo"></div>
+
+  <div class="perfil">
+    <img src="logo.png" alt="logo">
+  </div>
+
+  <h1>Victoria Gasoni</h1>
+  <div class="subtitulo">Victoria | produtos artesanais ♡</div>
+
+  <div class="descricao">
+    Aqui estão meus principais links e formas de contato
+  </div>
+
+  <a class="botao insta" href="https://instagram.com" target="_blank">
+    Meu Perfil
+  </a>
+
+  <a class="botao whats" href="https://wa.me/5562999999999" target="_blank">
+    Meu Contato
+  </a>
+
+  <div class="botao pix" onclick="copiarPix()">
+    Meu PIX
+  </div>
+
+  <a class="botao wifi" href="#">
+    Meu Wi-Fi
+  </a>
+
+  <a class="botao endereco" href="https://maps.google.com" target="_blank">
+    Meu Endereço
+  </a>
+
+  <div id="msg"></div>
+
+  <script>
+    function copiarPix() {
+      const pix = "SEU_CODIGO_PIX_AQUI";
+      navigator.clipboard.writeText(pix);
+      document.getElementById("msg").innerText = "Código Pix copiado!";
+    }
+  </script>
+
+</body>
+</html>
