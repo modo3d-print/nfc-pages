@@ -46,13 +46,20 @@
     Meu Endereço
   </a>
 -->
-  <div id="msg"></div>
+  <div id="toast"></div>
 
   <script>
-    function copiarPix() {
-      const pix = "00020126330014br.gov.bcb.pix0111159741777705204000053039865802BR5925VICTORIA LORENA GASONI DE6008ARARUAMA62070503***63049F8E";
+      function copiarPix() {
+      const pix = "SEU_CODIGO_PIX";
       navigator.clipboard.writeText(pix);
-      document.getElementById("msg").innerText = "Código Pix copiado!";
+    
+      const toast = document.getElementById("toast");
+      toast.innerText = "✅ Pix copiado! Abra seu banco e cole para pagar.";
+      toast.classList.add("show");
+    
+      setTimeout(() => {
+        toast.classList.remove("show");
+      }, 4000);
     }
   </script>
 
