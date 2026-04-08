@@ -1,12 +1,12 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: #a5c2f1;
+  background-color: #bfd4f7;
   text-align: center;
 }
 
 .topo {
-  background-color: #1b79d2;
+  background-color: #2585df;
   height: 120px;
 }
 
@@ -29,7 +29,7 @@ h1 {
 }
 
 .subtitulo {
-  color: #0415b1;
+  color: #01020a;
   font-size: 14px;
 }
 
@@ -60,11 +60,11 @@ h1 {
   height: 32px;
 }
 
-.insta { background: #e8cbd0; }
-.whats { background: #cde5d6; }
+.insta { background: #a9e1f7; }
+.whats { background: #cde5dd; }
 .pix { background: #cfe3df; }
 .wifi { background: #cde1ef; }
-.endereco { background: #ddd0e6; }
+.endereco { background: #c3ecdd; }
 
 .botao:hover {
   opacity: 0.9;
