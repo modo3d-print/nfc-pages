@@ -1,12 +1,12 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: #f5e1d0;
+  background-color: #a5c2f1;
   text-align: center;
 }
 
 .topo {
-  background-color: #522403;
+  background-color: #1b79d2;
   height: 120px;
 }
 
@@ -29,7 +29,7 @@ h1 {
 }
 
 .subtitulo {
-  color: #555;
+  color: #0415b1;
   font-size: 14px;
 }
 
@@ -98,4 +98,3 @@ h1 {
   color: #0a7f2e;
   margin-bottom: 5px;
 }
-
