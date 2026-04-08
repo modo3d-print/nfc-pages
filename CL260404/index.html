@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <title>Contatos - Vagner Barbosa</title>
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <div class="topo"></div>
+
+  <div class="perfil">
+    <img src="logo-optometria.png" alt="logo">
+  </div>
+
+  <h1>Optometria</h1>
+  <div class="subtitulo">Vagner Barbosa</div>
+
+  <div class="descricao">
+    Aqui estão meus principais links e formas de contato
+  </div>
+
+  <a class="botao insta" href="https://www.instagram.com/vagner.opto?igsh=cDd2YnZlOWo4eWtv" target="_blank">
+    <img src="../img/icone-instagram.png" class="icone">
+    Conheça meu Instagram
+  </a>
+
+  <a class="botao whats" href="https://wa.me/message/6ENHXETROYKRG1" target="_blank">
+    <img src="../img/icone-whatsapp.png" class="icone">
+    Fale comigo no WhatsApp
+  </a>
+
+  <div class="botao pix" onclick="copiarPix()">
+    <img src="../img/icone-pix.png" class="icone">
+    Pagar com Pix (copiar código)
+  </div>
+  
+  <!--<a class="botao wifi" onclick="copiarWifi()">
+    <img src="../img/icone-wifi.png" class="icone">
+    Acessar Wi-Fi: F5 Soluções em TI
+  </a>
+
+  <a class="botao endereco" href="https://g.page/r/CYXH9XSk5khVEBM/review" target="_blank">
+    <img src="../img/icone-localizacao.png" class="icone">
+    Ver Localização
+  </a>-->
+
+  <a class="botao avaliacao" href="https://g.page/r/CYXH9XSk5khVEBM/review" target="_blank">
+    <img src="../img/icone-avaliacao.png" class="icone">
+    Fazer Avaliação no Google
+  </a>
+
+  <div id="toast">
+    <div class="toast-title"></div>
+    <div class="toast-text"></div>
+  </div>
+
+<script>
+  function mostrarToast(titulo, mensagem) {
+    const toast = document.getElementById("toast");
+    const toastTitle = toast.querySelector(".toast-title");
+    const toastText = toast.querySelector(".toast-text");
+
+    // Define os textos personalizados
+    toastTitle.innerText = titulo;
+    toastText.innerText = mensagem;
+
+    // Mostra o toast
+    toast.classList.add("show");
+
+    // Esconde depois de 4 segundos
+    setTimeout(() => {
+      toast.classList.remove("show");
+    }, 4000);
+  }
+
+  function copiarPix() {
+    const chavePix = "00020126580014BR.GOV.BCB.PIX01361e17f904-d5fb-4c07-b86d-cd30f308d1a95204000053039865802BR5925VAGNER BARBOSA OPTOMETRIA6009SAO PAULO61080540900062250521V62F2BqEGVdLCn7dpszb26304E47F";
+    
+    navigator.clipboard.writeText(chavePix).then(() => {
+      mostrarToast("Código Pix Copiado!", "Abra o app do seu banco e cole o código para pagar.");
+    });
+  }
+
+ /* function copiarWifi() {
+    const senhaWifi = "AMELHORDAREGIAO"; // Coloque sua senha real aqui
+    
+    navigator.clipboard.writeText(senhaWifi).then(() => {
+      mostrarToast("Senha do Wi-Fi Copiada!", "Agora é só colar na rede: F5 Soluções em TI");
+    });
+
+  }*/
+</script>
+
+</body>
+</html>
+
