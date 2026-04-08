@@ -24,12 +24,12 @@
     Aqui estão meus principais links e formas de contato
   </div>
 
-  <a class="botao insta" href="https://www.instagram.com/oticachambella?igsh=dTViM2JicXlibnV1" target="_blank">
+  <a class="botao insta" href="https://www.instagram.com/" target="_blank">
     <img src="../img/icone-instagram.png" class="icone">
     Conheça meu Instagram
   </a>
 
-  <a class="botao whats" href="https://wa.me/message/TK2WJKKGP5XVH1" target="_blank">
+  <a class="botao whats" href="https://wa.me/22988377739" target="_blank">
     <img src="../img/icone-whatsapp.png" class="icone">
     Fale comigo no WhatsApp
   </a>
@@ -39,37 +39,56 @@
     Pagar com Pix (copiar código)
   </div>
   
-  <a class="botao wifi" onclick="copiarPix()">
+  <a class="botao wifi" onclick="copiarWifi()">
     <img src="../img/icone-wifi.png" class="icone">
-    Acessar Wi-Fi
+    Acessar Wi-Fi: F5 Soluções em TI
   </a>
 
-  <a class="botao endereco" href="https://maps.app.goo.gl/MYtxNwhWWxQsQMpi6" target="_blank">
+  <a class="botao endereco" href="https://www.google.com/maps/search/Cardan/@-22.8735398,-42.341069,17z?hl=pt-BR&entry=ttu&g_ep=EgoyMDI2MDQwNi4wIKXMDSoASAFQAw%3D%3D" target="_blank">
     <img src="../img/icone-localizacao.png" class="icone">
     Ver Localização
   </a>
 
   <div id="toast">
-    <div class="toast-title">Essa função estará disponível em breve!</div>
-    <div class="toast-text">
-      <!--Abra o app do seu banco e cole o código para finalizar o pagamento.-->
-    </div>
+    <div class="toast-title"></div>
+    <div class="toast-text"></div>
   </div>
 
-  <script>
-    function copiarPix() {
-      const pix = "AtualizarCodigo";
+<script>
+  function mostrarToast(titulo, mensagem) {
+    const toast = document.getElementById("toast");
+    const toastTitle = toast.querySelector(".toast-title");
+    const toastText = toast.querySelector(".toast-text");
+
+    // Define os textos personalizados
+    toastTitle.innerText = titulo;
+    toastText.innerText = mensagem;
+
+    // Mostra o toast
+    toast.classList.add("show");
+
+    // Esconde depois de 4 segundos
+    setTimeout(() => {
+      toast.classList.remove("show");
+    }, 4000);
+  }
+
+  function copiarPix() {
+    const chavePix = "00020101021126360014br.gov.bcb.pix0114374906910001695204000053039865802BR5909F5 S E TI6008ARARUAMA62070503***63040574";
     
-      navigator.clipboard.writeText(pix).then(() => {
-        const toast = document.getElementById("toast");
-        toast.classList.add("show");
+    navigator.clipboard.writeText(chavePix).then(() => {
+      mostrarToast("Código Pix Copiado!", "Abra o app do seu banco e cole o código para pagar.");
+    });
+  }
+
+  function copiarWifi() {
+    const senhaWifi = "AMELHORDAREGIAO"; // Coloque sua senha real aqui
     
-        setTimeout(() => {
-          toast.classList.remove("show");
-        }, 4000);
-      });
-    }
-  </script>
+    navigator.clipboard.writeText(senhaWifi).then(() => {
+      mostrarToast("Senha do Wi-Fi Copiada!", "Agora é só colar na rede: F5 Soluções em TI");
+    });
+  }
+</script>
 
 </body>
 </html>
