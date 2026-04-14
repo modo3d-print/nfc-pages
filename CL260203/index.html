@@ -36,12 +36,12 @@
 
   <div class="botao pix" onclick="copiarPix()">
     <img src="../img/icone-pix.png" class="icone">
-    Pagar com Pix (copiar código)
+    Pagar com Pix (copiar chave)
   </div>
   
-  <a class="botao wifi" onclick="copiarPix()">
+  <a class="botao wifi" onclick="copiarWifi()">
     <img src="../img/icone-wifi.png" class="icone">
-    Acessar Wi-Fi
+    Wi-Fi: Ótica Chambella
   </a>
 
   <a class="botao endereco" href="https://maps.app.goo.gl/MYtxNwhWWxQsQMpi6" target="_blank">
@@ -49,27 +49,51 @@
     Ver Localização
   </a>
 
+  <a class="botao avaliacao" href="https://g.page/r/CUwPC3HhC36eEBM/review" target="_blank">
+    <img src="../img/icone-avaliacao.png" class="icone">
+    Fazer Avaliação no Google
+  </a>
+
   <div id="toast">
-    <div class="toast-title">Essa função estará disponível em breve!</div>
-    <div class="toast-text">
-      <!--Abra o app do seu banco e cole o código para finalizar o pagamento.-->
-    </div>
+    <div class="toast-title"></div>
+    <div class="toast-text"></div>
   </div>
 
   <script>
+    function mostrarToast(titulo, mensagem) {
+      const toast = document.getElementById("toast");
+      const toastTitle = toast.querySelector(".toast-title");
+      const toastText = toast.querySelector(".toast-text");
+
+      // Define os textos personalizados
+      toastTitle.innerText = titulo;
+      toastText.innerText = mensagem;
+
+      // Mostra o toast
+      toast.classList.add("show");
+
+      // Esconde depois de 4 segundos
+      setTimeout(() => {
+        toast.classList.remove("show");
+      }, 4000);
+    }
+
     function copiarPix() {
-      const pix = "AtualizarCodigo";
-    
-      navigator.clipboard.writeText(pix).then(() => {
-        const toast = document.getElementById("toast");
-        toast.classList.add("show");
-    
-        setTimeout(() => {
-          toast.classList.remove("show");
-        }, 4000);
+      const chavePix = "65886117000160";
+      
+      navigator.clipboard.writeText(chavePix).then(() => {
+        mostrarToast("Chave Pix Copiada!", "Abra o app do seu banco e cole a chave para pagar.");
       });
     }
-  </script>
+
+    function copiarWifi() {
+      const senhaWifi = "chambella"; // Coloque sua senha real aqui
+      
+      navigator.clipboard.writeText(senhaWifi).then(() => {
+        mostrarToast("Senha do Wi-Fi Copiada!", "Agora é só colar na rede: Ótica Chambella");
+      });
+    }
+</script>
 
 </body>
 </html>

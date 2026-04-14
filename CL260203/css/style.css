@@ -65,6 +65,7 @@ h1 {
 .pix { background: #cfe3df; }
 .wifi { background: #cde1ef; }
 .endereco { background: #ddd0e6; }
+.avaliacao { background: #e8f0d7; }
 
 .botao:hover {
   opacity: 0.9;
