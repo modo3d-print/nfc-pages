@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <title>Contatos - Rubinho</title>
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <div class="topo"></div>
+
+  <div class="perfil">
+    <img src="logo-SantaLuzia.png" alt="logo">
+  </div>
+
+  <h1>Santa Luzia</h1>
+  <div class="subtitulo">Optometria</div>
+
+  <div class="descricao">
+    Aqui estão meus principais links e formas de contato
+  </div>
+
+  <a class="boto insta" href="https://www.instagram.com/institutorubinho/" target="_blank">
+    <img src="../img/icone-instagram.png" class="icone">
+    Conheça meu Instagram
+  </a>
+
+  <a class="botao whats" href="https://wa.me/5561985103496" target="_blank">
+    <img src="../img/icone-whatsapp.png" class="icone">
+    Fale comigo no WhatsApp
+  </a>
+
+  <div class="botao pix" onclick="copiarPix()">
+    <img src="../img/icone-pix.png" class="icone">
+    Pagar com Pix (copiar chave)
+  </div>
+  
+  <!--<a class="botao wifi" onclick="copiarWifi()">
+    <img src="../img/icone-wifi.png" class="icone">
+    Acessar Wi-Fi: F5 Soluções em TI
+  </a>
+
+  <a class="botao endereco" href="https://g.page/r/CYXH9XSk5khVEBM/review" target="_blank">
+    <img src="../img/icone-localizacao.png" class="icone">
+    Ver Localização
+  </a>-->
+
+  <a class="botao avaliacao" href="https://www.google.com/maps/place/Instituto+de+Beleza+Rubinho/@-15.805369,-48.0972284,17z/data=!4m16!1m7!3m6!1s0x935bccbb97ffffff:0x1117585583900565!2sInstituto+de+Beleza+Rubinho!8m2!3d-15.8053742!4d-48.0946535!16s%2Fg%2F1tqtyz2n!3m7!1s0x935bccbb97ffffff:0x1117585583900565!8m2!3d-15.8053742!4d-48.0946535!9m1!1b1!16s%2Fg%2F1tqtyz2n?entry=ttu&g_ep=EgoyMDI2MDQwOC4wIKXMDSoASAFQAw%3D%3D" target="_blank">
+    <img src="../img/icone-avaliacao.png" class="icone">
+    Fazer Avaliação no Google
+  </a>
+
+  <div id="toast">
+    <div class="toast-title"></div>
+    <div class="toast-text"></div>
+  </div>
+
+<script>
+  function mostrarToast(titulo, mensagem) {
+    const toast = document.getElementById("toast");
+    const toastTitle = toast.querySelector(".toast-title");
+    const toastText = toast.querySelector(".toast-text");
+
+    // Define os textos personalizados
+    toastTitle.innerText = titulo;
+    toastText.innerText = mensagem;
+
+    // Mostra o toast
+    toast.classList.add("show");
+
+    // Esconde depois de 4 segundos
+    setTimeout(() => {
+      toast.classList.remove("show");
+    }, 4000);
+  }
+
+  function copiarPix() {
+    const chavePix = "04766060000170";
+    
+    navigator.clipboard.writeText(chavePix).then(() => {
+      mostrarToast("Chave Pix Copiada!", "Abra o app do seu banco e cole a chave para pagar.");
+    });
+  }
+
+ /* function copiarWifi() {
+    const senhaWifi = "AMELHORDAREGIAO"; // Coloque sua senha real aqui
+    
+    navigator.clipboard.writeText(senhaWifi).then(() => {
+      mostrarToast("Senha do Wi-Fi Copiada!", "Agora é só colar na rede: F5 Soluções em TI");
+    });
+
+  }*/
+</script>
+
+</body>
+</html>
+
