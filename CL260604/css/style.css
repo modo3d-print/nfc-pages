@@ -1,12 +1,12 @@
 body {
   margin: 0;
   font-family: Arial, Arial, Helvetica, sans-serif;
-  background-color: #f7e8d4;
+  background-color: #c8cbcc;
   text-align: center;
 }
 
 .topo {
-  background-color: #c09e2d;
+  background-color: #1a5218;
   height: 120px;
 }
 
@@ -15,7 +15,7 @@ body {
 }
 
 .perfil img {
-  width: 180px;
+  width: 120px;
   height: 120px;
   border-radius: 50%;
   background: white;
@@ -60,10 +60,10 @@ h1 {
   height: 32px;
 }
 
-.insta { background: #dacaaa; }
-.whats { background: #f3dfc6; }
-.pix { background: #dce2a988; }
-.wifi { background: #cde1ef; }
+.insta { background: #e3f5b0; }
+.whats { background: #bfe0c1; }
+.pix { background: #cbe0b988; }
+.wifi { background: #e3f5bf; }
 .endereco { background: #c3ecdd; }
 .avaliacao { background: #e2e0c2; }
 
